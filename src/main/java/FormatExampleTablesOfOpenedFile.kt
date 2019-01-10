@@ -1,3 +1,4 @@
+
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -24,8 +25,7 @@ class FormatExampleTablesOfOpenedFile : AnAction() {
         val document = editor.document
         val virtualFile = FileDocumentManager.getInstance().getFile(document) ?: return
         val newTextLinesList: List<String>
-        newTextLinesList = ExampleTableFormatter()
-                .formatExampleTablesOfSourceLines(LinkedList(Arrays.asList(*document.text.split("""\r?\n""".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray())))
+        newTextLinesList = formatExampleTablesOfSourceLines(LinkedList(Arrays.asList(*document.text.split("""\r?\n""".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray())))
 
         val newText = newTextLinesList.joinToString("\n")
 
