@@ -18,7 +18,7 @@
     </extensions>
 
     <actions>
-        <action id="exampleTableFormater.formatExampleTablesOfOpenedFile" class="FormatExampleTablesOfOpenedFile"
+        <action id="exampleTableFormater.formatExampleTablesOfOpenedFile" class="FormatjBehaveTablesOfOpenedFile"
                 text="Format jBehave tables" description="Format jBehave tables of the opened file">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <keyboard-shortcut first-keystroke="alt shift E" keymap="$default"/>

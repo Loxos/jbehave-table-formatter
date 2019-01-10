@@ -9,7 +9,7 @@ import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.fileEditor.FileEditorManager
 import java.util.*
 
-class FormatExampleTablesOfOpenedFile : AnAction() {
+class FormatjBehaveTablesOfOpenedFile : AnAction() {
 
     override fun update(e: AnActionEvent) {
         e.presentation.isVisible =
@@ -25,7 +25,7 @@ class FormatExampleTablesOfOpenedFile : AnAction() {
         val document = editor.document
         val virtualFile = FileDocumentManager.getInstance().getFile(document) ?: return
         val newTextLinesList: List<String>
-        newTextLinesList = formatExampleTablesOfSourceLines(LinkedList(Arrays.asList(*document.text.split("""\r?\n""".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray())))
+        newTextLinesList = jBehaveTablesOfSourceLines(LinkedList(Arrays.asList(*document.text.split("""\r?\n""".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray())))
 
         val newText = newTextLinesList.joinToString("\n")
 
@@ -33,7 +33,7 @@ class FormatExampleTablesOfOpenedFile : AnAction() {
         ApplicationManager.getApplication().invokeLater {
             CommandProcessor.getInstance().executeCommand(project, {
                 ApplicationManager.getApplication().runWriteAction(readRunner)
-            }, "ExampleTableFormatter", null)
+            }, "jBehaveTableFormatter", null)
         }
     }
 }

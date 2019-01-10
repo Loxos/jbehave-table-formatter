@@ -7,7 +7,7 @@ private val DEL = "|"
 private val DEL_REGEXP = """\|""".toRegex()
 
 
-fun formatExampleTablesOfSourceLines(sourceLines: LinkedList<String>): List<String> {
+fun jBehaveTablesOfSourceLines(sourceLines: LinkedList<String>): List<String> {
     var tableLineCollecting = false
     var startIndex = 0
     for (lineIndex in sourceLines.indices) {
