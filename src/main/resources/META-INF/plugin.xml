@@ -1,16 +1,25 @@
 <idea-plugin>
     <id>tk.birneee.jbehave-table-formatter-intellij-plugin</id>
     <name>JBehave Table Formatter</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <vendor email="" url="">Benedikt Spies</vendor>
 
     <description><![CDATA[
       The plugin provides a convenient way for formatting Example Tables in JBehave .story files to have same column length.<br>
       All table rows must be delimited with '|'. Line of table must start from '|' to be formatted.<br>
-      Alt+Shift+E or Right click in editor area -> Format example tables<br>
+      Alt+Shift+E or Right click in editor area -> Format jBehave tables<br>
 
       Based on the work of: Alex Rybkin
     ]]></description>
+
+    <change-notes><![CDATA[
+      v1.1
+      - Table rows starting with spaces or tabs are formatted now.<br>
+      - Converted source to Kotlin.<br>
+      v1.0
+      - Main functionality added.<br>
+    ]]>
+    </change-notes>
 
     <idea-version since-build="141.0"/>
 
