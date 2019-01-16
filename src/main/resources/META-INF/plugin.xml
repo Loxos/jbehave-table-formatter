@@ -9,7 +9,7 @@
       All table rows must be delimited with '|'. Line of table must start from '|' to be formatted.<br>
       Alt+Shift+E or Right click in editor area -> Format jBehave tables<br>
 
-      Based on the work of: Alex Rybkin
+      Based on the work of: Alex Rybkin (https://github.com/alexamber/example-table-formatter)
     ]]></description>
 
     <change-notes><![CDATA[
