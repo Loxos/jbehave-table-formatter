@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>tk.birneee.jbehave-table-formatter-intellij-plugin</id>
     <name>JBehave Table Formatter</name>
-    <version>1.1</version>
+    <version>1.2.1</version>
     <vendor email="" url="">Benedikt Spies</vendor>
 
     <description><![CDATA[
@@ -13,6 +13,8 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      v1.2
+      - performance improvements.<br>
       v1.1
       - Initial release of the plugin.<br>
       - Table rows starting with spaces or tabs are formatted now.<br>
@@ -28,7 +30,7 @@
     </extensions>
 
     <actions>
-        <action id="exampleTableFormater.formatExampleTablesOfOpenedFile" class="FormatjBehaveTablesOfOpenedFile"
+        <action id="jbehaveTableFormatter.formatjBehaveTablesOfOpenedFile" class="tk.birneee.intellijplugins.jbehavetableformatter.actions.FormatjBehaveTablesOfOpenFile"
                 text="Format jBehave tables" description="Format jBehave tables of the opened file">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <keyboard-shortcut first-keystroke="alt shift E" keymap="$default"/>
